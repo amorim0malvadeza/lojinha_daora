@@ -2,9 +2,11 @@ import {StyleSheet} from 'react-native'
 
 const estilo = StyleSheet.create({
     titulo: {
+      height:100,
+      backgroundColor:'red',
       fontSize: 35,
       fontWeight: 'bold',
-      marginTop: 20,
+      marginTop: 0,
     },
     subtitulo: {
       fontSize: 20,

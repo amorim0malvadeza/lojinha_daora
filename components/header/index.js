@@ -4,9 +4,10 @@ import estilo from "./style.js";
 export default function Header() {
   return (
     <>
-      <Text style={estilo.titulo}>Minha Rotina Semanal</Text>
+      <Text style={estilo.titulo}>
+    
+        Loja de brinquedo</Text>
 
-      <Text style={estilo.subtitulo}>Total de Horas = 168 - 100%</Text>
 
       <View
         style={{
@@ -17,11 +18,6 @@ export default function Header() {
           justifyContent: "space-between",
         }}
       >
-        <Text style={estilo.tituloCard}>Atividade</Text>
-
-        <Text style={estilo.tituloCard}>Descrição</Text>
-
-        <Text style={estilo.tituloCard}>a </Text>
       </View>
     </>
   );

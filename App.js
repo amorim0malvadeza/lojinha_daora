@@ -4,6 +4,7 @@ import Header from "./components/header";
 import Card from "./components/card";
 import rotinas from "./rotina"
 
+
 export default function App() {
   return (
     <View style={{width:'100%'}}>
@@ -13,12 +14,14 @@ export default function App() {
       
       data = {rotinas}
       keyExtractor = {(item)=>item.id} 
+      horizontal = {true}
       renderItem = {({item}) => (
         <Card
         image = {item.imagem}
         title_task = {item.titulo}
         preco = {item.preco}
         nome = {item.nome}
+  
         />
       )}
       
