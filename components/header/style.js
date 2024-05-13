@@ -3,7 +3,7 @@ import {StyleSheet} from 'react-native'
 const estilo = StyleSheet.create({
     titulo: {
       height:100,
-      backgroundColor:'red',
+      backgroundColor:'yellow',
       fontSize: 35,
       fontWeight: 'bold',
       marginTop: 0,
@@ -18,6 +18,7 @@ const estilo = StyleSheet.create({
       fontWeight: 'bold',
       color: '#1d3557',
     },
+    
   });
 
   export default estilo;

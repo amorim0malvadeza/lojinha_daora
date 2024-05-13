@@ -2,46 +2,35 @@ import React from "react";
 import { StyleSheet, View, FlatList } from "react-native";
 import Header from "./components/header";
 import Card from "./components/card";
-import rotinas from "./rotina"
-
+import rotinas from "./rotina";
 
 export default function App() {
   return (
-    <View style={{width:'100%'}}>
-      <Header></Header>
+    <View style={estilo.container}>
+      <Header />
 
       <FlatList
-      
-      data = {rotinas}
-      keyExtractor = {(item)=>item.id} 
-      horizontal = {true}
-      renderItem = {({item}) => (
-        <Card
-        image = {item.imagem}
-        title_task = {item.titulo}
-        preco = {item.preco}
-        nome = {item.nome}
-  
-        />
-      )}
-      
-        
-      
+        data={rotinas}
+        keyExtractor={(item) => item.id}
+       
+        contentContainerStyle={estilo.listaContainer}
+        renderItem={({ item }) => (
+          <Card
+            image={item.imagem}
+            title_task={item.titulo}
+            preco={item.preco}
+            nome={item.nome}
+            descricao={item.descricao}
+            disponibilidade={item.disponibilidade}
+          />
+        )}
       />
     </View>
   );
 }
 
 const estilo = StyleSheet.create({
-  container: {
-    flex: 1,
-
-    alignItems: "center",
-
-    backgroundColor: "#CAF0F8",
-
-    borderColor: "#90E0EF",
-
-    paddingHorizontal: 20,
-  },
-});
+  listaContainer: {
+    flexDirection: 'row', // Organiza os itens em uma linha
+    flexWrap: 'wrap', // Permite que os itens quebrem
+  }});

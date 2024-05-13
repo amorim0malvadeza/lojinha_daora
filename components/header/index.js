@@ -11,6 +11,7 @@ export default function Header() {
 
       <View
         style={{
+
           width: "95%",
           flexDirection: "row",
           marginTop: 20,

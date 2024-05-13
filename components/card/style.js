@@ -1,32 +1,43 @@
-import {StyleSheet} from 'react-native'
+import { StyleSheet } from "react-native";
 
 const estilo = StyleSheet.create({
-    cardTarefa: {
-      marginTop: 20,
-      backgroundColor: '#A8DADC',
-      width: 325,
-      height: 225,
-      alignItems:'center',
-      justifyContent:'space-between',
-      borderRadius: 10,
-      flexDirection: 'collumn',
-      padding: 15,
-      marginRight:15
-    },
-    tituloCard: {
-      fontSize: 13,
-      fontWeight: 'bold',
-      color: '#1d3557',
-    },
-    textoCard: {
-      fontSize: 10,
-      marginTop: 5,
-    },
-    imagemCard: {
-      width: 120,
-      height: 100,
-      marginRight: 15,
-    },
-  });
+  container: {
+    paddingHorizontal: 10,
+    marginTop: 20,
+  },
+  cardTarefa: {
+    backgroundColor: "#A8DADC",
+    width: "48%", // Definindo uma largura para cada card, para que dois cards se encaixem na mesma linha
+    alignItems: "center",
+    justifyContent: "center",
+    borderRadius: 10,
+    padding: 15,
+    marginBottom: 20,
+    borderWidth: 1,
+    borderColor: "#457B9D",
+    marginLeft: 10,
+    marginRight : 20,
+  },
+  tituloCard: {
+    fontSize: 16,
+    fontWeight: "bold",
+    color: "#1d3557",
+    textAlign: "center",
+    marginBottom: 10,
+  },
+  textoCard: {
+    fontSize: 14,
+    color: "#1d3557",
+    textAlign: "center",
+    marginBottom: 10,
+  },
+  imagemCard: {
+    width: "100%", // Definindo a largura da imagem como 100% do card
+    height: 150, // Definindo uma altura fixa para todas as imagens
+    marginBottom: 10,
+    borderRadius: 10,
+  },
+  
+});
 
-  export default estilo;
+export default estilo;

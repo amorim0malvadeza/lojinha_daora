@@ -16,6 +16,8 @@ export default function Card(props) {
         </View>
 
         <Text style={{ fontSize: 25 }}>{props.nome}</Text>
+        <Text style={{ fontSize: 15 }}>{props.descricao}</Text>
+        <Text style={{ fontSize: 15 }}>{props.disponibilidade}</Text>
       </View>
     </>
   );
