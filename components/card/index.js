@@ -1,24 +1,22 @@
-import { Text, View, Image } from "react-native";
+import { Text, View, Image , TouchableOpacity} from "react-native";
 import estilo from "./style";
+import { useNavigation } from '@react-navigation/native';
+import imagem from "../../rotina/index.js"
 
+export default function Card(props){
+  const {titulo,imagem,descricao,preco,disponibilidade} = props
+  const navigation = useNavigation();
 
-export default function Card(props) {
-  return (
-    <>
-      <View style={estilo.cardTarefa}>
-        
-        <Image style={estilo.imagemCard} source={{ uri: props.image }} />
-
-        <View style={{ marginLeft: 15, width: 150 }}>
-          <Text style={estilo.tituloCard}>{props.title_task}</Text>
-
-          <Text style={estilo.textoCard}>{props.preco}</Text>
-        </View>
-
-        <Text style={{ fontSize: 25 }}>{props.nome}</Text>
-        <Text style={{ fontSize: 15 }}>{props.descricao}</Text>
-        <Text style={{ fontSize: 15 }}>{props.disponibilidade}</Text>
-      </View>
-    </>
-  );
+  return(
+      <TouchableOpacity style={estilo.cardTarefa} onPress={()=>navigation.navigate('brinks',{props:props})}>
+          <Image style={estilo.imagemCard} source={{ uri: imagem }} />
+          <View style={{  marginLeft: 15,width:150 }}>
+               <Text style={estilo.tituloCard}>{titulo}</Text>
+              <Text style={estilo.textoCard}>{descricao}</Text>
+              <Text style={estilo.precoCard}>{preco}</Text>
+              <Text style={estilo.disponibilidadeCard}>{disponibilidade}</Text>
+          </View>
+      </TouchableOpacity>
+  )
 }
+

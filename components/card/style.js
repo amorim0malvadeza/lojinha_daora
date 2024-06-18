@@ -7,7 +7,8 @@ const estilo = StyleSheet.create({
   },
   cardTarefa: {
     backgroundColor: "#A8DADC",
-    width: "48%", // Definindo uma largura para cada card, para que dois cards se encaixem na mesma linha
+    width: "96%", 
+    height:"96%",
     alignItems: "center",
     justifyContent: "center",
     borderRadius: 10,

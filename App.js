@@ -1,36 +1,23 @@
-import React from "react";
-import { StyleSheet, View, FlatList } from "react-native";
-import Header from "./components/header";
-import Card from "./components/card";
-import rotinas from "./rotina";
+import React from 'react';
+import { Text, StyleSheet, View, Image,FlatList} from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
+import Home from './screens/home';
+import Details from './screens/brinks'
 
 export default function App() {
-  return (
-    <View style={estilo.container}>
-      <Header />
 
-      <FlatList
-        data={rotinas}
-        keyExtractor={(item) => item.id}
-       
-        contentContainerStyle={estilo.listaContainer}
-        renderItem={({ item }) => (
-          <Card
-            image={item.imagem}
-            title_task={item.titulo}
-            preco={item.preco}
-            nome={item.nome}
-            descricao={item.descricao}
-            disponibilidade={item.disponibilidade}
-          />
-        )}
-      />
-    </View>
+  const stack = createStackNavigator();
+
+  return (
+    <NavigationContainer>
+
+      <stack.Navigator>
+
+        <stack.Screen name='Home' component={Home} ></stack.Screen>
+        <stack.Screen name='brinks' component={Details}></stack.Screen>
+      </stack.Navigator>
+
+    </NavigationContainer>
   );
 }
-
-const estilo = StyleSheet.create({
-  listaContainer: {
-    flexDirection: 'row', // Organiza os itens em uma linha
-    flexWrap: 'wrap', // Permite que os itens quebrem
-  }});
